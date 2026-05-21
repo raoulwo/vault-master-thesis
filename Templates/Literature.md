@@ -35,4 +35,4 @@ pdf_link: "[[<TODO>|Open PDF]]"
 
 ## Links
 
-%% Links to related topics. %%
+%% Links to related literature. %%
