@@ -1,8 +1,8 @@
 ---
 date: <TODO>
 attendees:
-	- <TODO>
-	- "Raoul Wograndl"
+  - <TODO>
+  - "Raoul Wograndl"
 ---
 # {{title}}
 
