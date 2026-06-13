@@ -14,6 +14,14 @@ pdf_link: "[[Towards_a_Computing_Platform_for_the_LEO_Edge.pdf|Open PDF]]"
 
 The paper describes the characteristics of the LEO edge, derives requirements for implementing LEO edge applications and compares three organization paradigms for applications (OPAs) for how suitable they are for meeting the identified requirements: i) virtual machines, ii) containers, and iii) serverless functions.
 
+## Thoughts
+
+- High availability, thus resilience and reliability are a requirement -> abstracting away underlying heterogeneous systems for better fault-tolerance
+- Isolation, elastic scalability, and flexible deployment
+- Centralized orchestration might hinder workflows -> decentralized approach?
+- Migrations for overcoming stationarity -> migrating VM, container, serverless function to another node; how are stateful systems handled here?
+- Is state managed at the edge or cloud? In any case replication of stateful applications seems to be difficult compared to stateless systems.
+
 ## Related Work
 
 %% Existing state-of-the-art research. %%
@@ -60,6 +68,10 @@ The paper describes the characteristics of the LEO edge, derives requirements fo
 - *R5: Flexible Deployment*. Shipping VMs, container images or serverless functions to satellite servers is simple. All OPAs can quickly start or stop services. The efficacy of pay-as-you-go models improves with granularity of allocated resources. For this reason, serverless functions outperform containers and VMs.
 - *R6: Elastic Scalability*. Offloading is required to meet demand if one service exceeds its limits. Individual service requests or full services may need to be offloaded. For individual request offloading, stateless serverless functions are suitable.
 
+Future work: 
+
+- Planning and evaluation of a serverless platform for the LEO edge.
+- *Stationarity* needs to be explored more; different *hand-off* models for satellites
 
 ## Methodology
 
