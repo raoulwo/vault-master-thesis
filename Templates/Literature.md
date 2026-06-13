@@ -11,6 +11,10 @@ pdf_link: "[[<TODO>|Open PDF]]"
 
 %% One-sentence summary of the core/claim contribution. %%
 
+## Thoughts
+
+%% Thoughts and questions about the paper. %%
+
 ## Related Work
 
 %% Existing state-of-the-art research. %%
