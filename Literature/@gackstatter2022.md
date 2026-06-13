@@ -15,24 +15,49 @@ pdf_link: "[[Pushing_Serverless_to_the_Edge_with_WebAssembly_Runtimes.pdf|Open P
 
 The paper presents a prototypical runtime environment for WebAssembly execution in Apache OpenWhisk (WOW) that reduces cold-start latency by up to 99.5%, can improve on memory consumption by more than 5x, and increases function execution throughput by up to 4.2x on low-end edge computing hardware.
 
+## Thoughts
+
+- Wasm helps with cold-start latencies, with acceptable loss in warm-start performance. We need a use case in which cold-start latencies are the bottleneck, not the warm-start performance, else a hybrid approach might be more suitable.
+- The serverless model is great for unpredictable and bursty workloads, however the cold-start latencies are challenging especially for latency-critical applications (computations are moved closer to the edge to achieve shorter latencies).
+- The serverless model is also used for its pay-as-you-go model, auto-scaling behavior, and scale-to-zero principle. Question: Is the *scale-to-zero* principle *that* important for real-life use cases that we actually want to avoid prewarming or similar mechanisms to combat cold-start latencies?
+- I think scale-to-zero and shorter cold-starts are for keeping costs low.
+- Isolation in multi-tentant environments is required.
+- Cold-start latencies are in the *hundreds of milliseconds*.
+- Wasm is a promising solution for cold-start latencies, Wasm functions can be created/destroyed in *microseconds*, they are portable, multiple languages can be compiled to Wasm. A variety of runtimes exist for Wasm execution on the edge, Wasm supports near-native execution speeds
+- Question: Standalone Wasm runtime vs. Integration into existing serverless platforms (if so: wasm-only or hybrid for better warm-start performance)?
+- Serverless used for mixed workloads: CPU-bound and I/O-bound
+- Interpreted Wasm is found to execute significantly slower than native code, JIT and AoT compilation are supported however for near-native execution.
+- Wasm uses software-based fault isolation techniques to sandbox an executing Wasm module.
+- Wasm interacts with the host system via the *WebAssembly System Interface* (WASI). Wasm modules cannot use syscalls directly, everything goes through WASI function calls (slower performance, better security and portability).
+- Tradeoff: Shorter response times vs. cost and resource saving (think prewarming or keeping containers running) -> Reducing cold-start times would benefit both sides at once
+- Wasm has characteristics suitable for serverless edge runtimes: programming language-agnostic, multi-tenancy support, portable (for heterogeneous edge hardware)
+- The usual steps for code execution in serverless platforms are the following: 1) upload code to the platform, 2) inintialize the executing env, 3) run it -> note that Wasm has significantly slower execution speed if interpreted: JIT, AoT compilation helps with that; JIT compilation after uploading the code however is the greatest chunk of cold-start time, therefore even before the execution, AoT (pre)compilation of the Wasm module is preferred to prevent the largest cold-start delay due to compilation
+- Selection of Wasm runtime is important, following criteria for selecting the right one exist: JIT, AoT compilation support, architecture support, ease of embedding, WASI standard compatibility
+- Integration into existing OpenWhisk platform: Either implement compatible executor that still uses container-semantics for interfacing with Wasm modules, or integrate using Kubernetes
+- This work does not address stateful function invocations, sharing state across functions
+- No mention of serverless function execution for distributed networks (such as satellite networks) are made specifically; sharing state over multiple nodes; live-updating code (heterogeneous environment)
+- Wasm is promising: Cold-starts are made cheap, C/C++ and Rust are supported well, Scale-to-zero (not fully realized, however getting way closer); limitations are CPU-bound workloads
+
 ## Related Work
 
 %% Existing state-of-the-art research. %%
 
 Existing approaches to combat cold-start latency:
 
-- Pre-warming
+- Pre-warming (problematic at the edge)
 - Pre-creation
 - Prediction
 - Client-centric approaches
 
+It's possible to combine AI-based prediction for keep-alive times with Wasm.
+
 WebAssembly in serverless computing:
 
-- Execution in Node.js
-- Cloudflare Workers
-- Fastly's Lucet
-- FAASM
-- Sledge
+- Execution in Node.js (CPU-bound performance is bad because JIT)
+- Cloudflare Workers (Avoids Node.js startup overhead, still needs to parse and compile code before execution)
+- Fastly's Lucet (Similar approach used for AoT compilation, thus reaching good results)
+- FAASM (Tackles a different problem: state-sharing across functions)
+- Sledge (Focuses on single-host function execution)
 
 ## Contributions
 
@@ -49,6 +74,12 @@ The following three contributions are made:
 - An execution environment for WebAssembly serverless functions is designed.
 - The prototypical WebAssembly runtime environment WOW is presented.
 - Extensive experiments on WOW are performed.
+
+Limitations and open challenges:
+
+- Wasm features (multi-threading, atomics...)
+- Stateful functions (WOW is stateless, caching for stateful functions could be implemented)
+- Cold-start latencies (Are still high sometimes, combination with complementary approaches would be useful)
 
 ## Methodology
 
@@ -110,7 +141,25 @@ To interact with OpenWhisk more easily, the authors implemented their own *Execu
 
 Experiments for both *CPU-bound* and *I/O-bound* workloads where performed. The metrics measured where latency and cold-start time (methodology of measurement explained in detail).
 
-### Results
+Mixed workload evaluation:
+
+Throughput (requests/s) increased for Wasm functions, this increase is higher for edge-constrained environments (tested with Raspberry PIs).
+
+I/O-bound workload:
+
+Throughput higher for Wasm functions, this is limited however by *Executor* implementation and number of concurrent threads that can be spawned.
+
+CPU-bound workload:
+
+Here, Docker runtime outperforms Wasm runtimes:
+
+- 39% (wamr)
+- 57% (wasmtime)
+- 88% (wasmer)
+
+NOTE: 88% (wasmer) can be noted as acceptible performance compared to Docker with better cold-start times.
+
+Results:
 
 - The WebAssembly runtimes have around 0.5% of the cold-start time of Docker.
 - The average throughput gain of Wasm executors on a Raspberry Pi are from 2.4-4.2x.
