@@ -16,6 +16,11 @@ pdf_link: "[[Stardust__A_Scalable_and_Extensible_Simulator_for_the_3D_Continuum.
 
 *Stardust*, a scalable and extensible simulator for the *3D continuum*, is presented in the paper.
 
+## Thoughts
+
+- Resource to task allocation is handled via Kubernetes.
+- Future work involves implementing a lightweight emulation mode based on containerization -> maybe an alternative would be Wasm as runtime with scalability in mind
+
 ## Related Work
 
 %% Existing state-of-the-art research. %%
@@ -52,6 +57,12 @@ The papers' main contributions are:
 3. *SimPlugin*, a plugin mechanism which serves as an integration point for custom logic that should be executed by the simulator.
 
 These contributions alleviate shortcomings of existing simulators by making *Stardust* **scalable** and **extensible**.
+
+Future work:
+
+- Implement approximation of perturbed orbits
+- Introduce emulator capabilities (allow choosing between simulator and emulator mode)
+- Introduce lightweight container emulation mode in addition to 3D continuum emulation mode based on Kubernetes
 
 ## Methodology
 
