@@ -24,6 +24,8 @@ TODO: Research migration mechanisms to achieve virtual stationarity -> Migrating
 - Trade-off in complexity of migrating stateful serverless functions: Is it worth the additional migration overhead for having stateful serverless functions in orbital edge systems?
 - Serverless edge can't handle continuous data streams (audio transcoding, video conferencing well) -> how can this be improved?
 - A centralized scheduler is proposed -> What if we have decentralized schedulers? Scheduler location: Authors believe that existence of centralized scheduler is good enough, however future research for different scheduler architectures may be possible -> distributed per-satellite autonomous schedulers + intelligent scheduling algorithms?
+- LEO satellite systems are growing, therefore a need for scalability exists. Maybe this necessitates the existence of lightweight serverless platforms with a focus on scalability; that's why *HyperDrive* uses a distributed scheduler as well for the 3D continuum
+- Is a combination of serverless agents with distributed schedulers and WebAssembly something to be desired? Don't know if that would contribute anything
 
 ## Questions
 
