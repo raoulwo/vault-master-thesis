@@ -26,6 +26,9 @@ TODO: Research migration mechanisms to achieve virtual stationarity -> Migrating
 - A centralized scheduler is proposed -> What if we have decentralized schedulers? Scheduler location: Authors believe that existence of centralized scheduler is good enough, however future research for different scheduler architectures may be possible -> distributed per-satellite autonomous schedulers + intelligent scheduling algorithms?
 - LEO satellite systems are growing, therefore a need for scalability exists. Maybe this necessitates the existence of lightweight serverless platforms with a focus on scalability; that's why *HyperDrive* uses a distributed scheduler as well for the 3D continuum
 - Is a combination of serverless agents with distributed schedulers and WebAssembly something to be desired? Don't know if that would contribute anything
+- *Trabant*: Basically, Satellite-as-a-Service (or Constellation-as-a-Service) is proposed -> Create a serverless platform based on Wasm for secure isolation in multi-tenant context with good cold-start times? Maybe address the scalability, or elasticity aspect?
+- Satellite-as-a-Service -> Basically satellites as Cloudflare workers?
+
 
 ## Questions
 
