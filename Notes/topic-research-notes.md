@@ -4,7 +4,7 @@
 - "Serverless" AND "3D Continuum"
 - "Serverless" AND "WebAssembly"
 
-Found *12 papers* via Google Scholar (see *Zotero*).
+Found *13 papers* via Google Scholar (see *Zotero*).
 
 TODO: Research about shared state management in orbital systems.
 TODO: Research about satellite stationarity and hand-off models.
