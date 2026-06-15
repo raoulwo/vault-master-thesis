@@ -14,6 +14,20 @@ pdf_link: "[[Lumos__Performance_Characterization_of_WebAssembly_as_a_Serverless_
 
 The work presents *Lumos*, a performance model and benchmarking tool for characterizing serverless runtimes.
 
+## Thoughts
+
+- The paper differentiates between CPU-intensive and data-intensive work, what's the difference between data-intensive work and I/O-intensive work?
+- Lumos makes it possible to evaluate diverse workload characteristics for serverless runtimes, what's missing in context of OEC?
+	- Migrations or handoffs
+	- Satellite position / Temperature
+	- Distributed workflows including transmission latency?
+- Impacting cold-start time: data I/O, auto-scaling, scheduling, device heterogeneity, network congestion
+- Binary size (which is smaller for Wasm) directly impacts cold-start time
+- Only WasmEdge as runtime is evaluated, the benchmarking is extensible to other Wasm runtimes as well however
+- Wasm up to 30x smaller image size -> benefits limited network, for handoffs in OEC perhaps?
+- Cold-start Wasm good, Warm-start Wasm 1.1x slower (maybe negligible) -> I/O and serialization overhead 2x (how to reduce this)
+- Wasm performance degradation under high load -> For high concurrency, scalability, container-runtimes are preferred
+
 ## Related Work
 
 %% Existing state-of-the-art research. %%

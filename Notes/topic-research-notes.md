@@ -29,6 +29,7 @@ TODO: Research migration mechanisms to achieve virtual stationarity -> Migrating
 - *Trabant*: Basically, Satellite-as-a-Service (or Constellation-as-a-Service) is proposed -> Create a serverless platform based on Wasm for secure isolation in multi-tenant context with good cold-start times? Maybe address the scalability, or elasticity aspect?
 - Satellite-as-a-Service -> Basically satellites as Cloudflare workers?
 - *Stardust* Future work involves implementing a lightweight emulation mode based on containerization -> maybe an alternative would be Wasm as runtime with scalability in mind
+- Most important question: Is Wasm **alone** good enough yet, should we instead go for a hybrid approach with Docker, similar to how Wasm was integrated into OpenWhisk?
 
 ## Questions
 
