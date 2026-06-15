@@ -31,6 +31,12 @@ TODO: Research migration mechanisms to achieve virtual stationarity -> Migrating
 - *Stardust* Future work involves implementing a lightweight emulation mode based on containerization -> maybe an alternative would be Wasm as runtime with scalability in mind
 - Most important question: Is Wasm **alone** good enough yet, should we instead go for a hybrid approach with Docker, similar to how Wasm was integrated into OpenWhisk?
 
+Simple extensions:
+
+- Move existing container-based runtime to Wasm
+- Create hybrid Wasm/Container-based runtime platform
+- Extend existing OEC solution to cover whole 3D-continuum
+
 ## Questions
 
 - Are there existing solutions to state-management in orbital edge systems?
