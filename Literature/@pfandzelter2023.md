@@ -13,6 +13,8 @@ pdf_link: "[[Serverless_Abstractions_for_Edge_Computing_in_Large_Low-Earth_Orbit
 
 %% One-sentence summary of the core/claim contribution. %%
 
+The paper introduces serverless abstractions for LEO edge applications.
+
 ## Thoughts
 
 - LEO networks have the potential to extend 6G mobile networks to remote/rural areas.

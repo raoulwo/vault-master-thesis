@@ -5,7 +5,7 @@ tags:
   - serverless
 pdf_link: "[[Truffle__Efficient_Data_Passing_for_Data-Intensive_Serverless_Workflows_in_the_Edge-Cloud_Continuum.pdf|Open PDF]]"
 ---
-# @marcelino2024b
+# Truffle: Efficient Data Passing for Data-Intensive Serverless Workflows in the Edge-Cloud Continuum
 
 ## TLDR
 

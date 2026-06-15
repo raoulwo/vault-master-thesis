@@ -48,3 +48,32 @@ Simple extensions:
 - What should be our goal here? Compatibility with existing, non-Wasm (Docker-based) platforms, or (like Faasm) standalone Wasm stuff that doesn't interoperate with containers? Do novel approaches like Faasm make sense if not applicable via modern serverless platforms like AWS Lambda (improvements or real-world applicability)?
 - Are there any latency-critical use cases for satellite networks -> That's where the improved cold-start latency and scale-to-zero characteristic of Wasm serverless would shine
 - What's the *Sticky* heuristic for migration in context of virtual stationarity?
+
+## For Meeting on the 15th
+
+Papers I found to be most relevant:
+
+- @gackstatter2022: Wasm runtime platform integrated into OpenWhisk
+- @marcelino2024a: Actor model for serverless functions
+- @marcelino2025a: Performance characterization for Wasm
+- @pfandzelter2021: Characteristics, requirements for LEO edge
+- @pfandzelter2023: Serverless abstractions for LEO edge applications
+- @pfandzelter2024: Serverless platform for LEO edge
+- @pfandzelter2025: Serverless architecture for multi-tenant LEO platforms
+- @pusztai2024: Scheduler for 3D continuum
+- @pusztai2025: Simulator for 3D continuum
+
+Things I considered:
+
+- Standalone-Wasm runtime vs. hybrid runtime
+- Focus on data-intensive applications / data replication aspect (seems unrelated to Wasm)
+- Handoff mechanisms for virtual stationarity, optimizing migrations via Wasm runtime
+- Serverless LEO with focus on:
+	- Scalability
+	- Orchestration
+	- Multi-tenancy
+	- Data-replication
+- Addition to existing works by:
+	- Extension from LEO to 3D continuum
+	- Moving from container-runtimes to Wasm or hybrid runtimes
+- Wasm-based emulator
