@@ -1,10 +1,10 @@
 ---
-date: <TODO>
+date: {{title}}
 attendees:
-  - <TODO>
+  - "Daniel Kleebinder"
   - "Raoul Wograndl"
 ---
-# {{title}}
+# Notes
 
 ## Objective
 

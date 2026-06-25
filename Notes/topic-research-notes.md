@@ -71,9 +71,20 @@ Things I considered:
 - Serverless LEO with focus on:
 	- Scalability
 	- Orchestration
-	- Multi-tenancy
+	- Multi-tenancy xxx
+	- Migration/Handoffs/Live-migration xxx
 	- Data-replication
 - Addition to existing works by:
 	- Extension from LEO to 3D continuum
 	- Moving from container-runtimes to Wasm or hybrid runtimes
 - Wasm-based emulator
+
+Live-migrations: Streaming, real-time applications, extending runtimes, creating snapshots (checkpoints/restoration) which are transferred, maybe using TCP-sockets, Wasm runtime on TCP-level; From JIT -> on-stack replacement: 1) at function begin, 2) in loop header, how do you work
+with streamed data from TCP sockets? Context of real-time applications
+TCP-specific or UDP-specific or even agnostic to underlying L4 protocol
+
+TODO:
+
+Until next meeting -> Festlegen auf ein Thema, das ist mein Themengebiet
+Zu diesem Thema schon ein paar paper lesen, ein paper bei hand haben -> das ist richtig cool, da will ich weiter arbeiten
+Wenn ich dieses Paper gefunden habe -> Genau durchlesen, nicht nur ueberfliegen; kritisch hinterfragen, evaluierung gegen baseline oft indiz fuer luecken im ansatz
