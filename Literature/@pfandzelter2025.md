@@ -6,7 +6,7 @@ tags:
   - orbital-edge-computing
 pdf_link: "[[Trabant__A_Serverless_Architecture_for_Multi-Tenant_Orbital_Edge_Computing.pdf|Open PDF]]"
 ---
-# @pfandzelter2025
+# Trabant: A Serverless Architecture for Multi-Tenant Orbital Edge Computing
 
 ## TLDR
 

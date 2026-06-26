@@ -4,6 +4,7 @@ year: 2025
 tags:
   - serverless
   - webassembly
+  - benchmark
 pdf_link: "[[Lumos__Performance_Characterization_of_WebAssembly_as_a_Serverless_Runtime_in_the_Edge-Cloud_Continuum.pdf|Open PDF]]"
 ---
 # Lumos: Performance Characterization of WebAssembly as a Serverless Runtime in the Edge-Cloud Continuum
