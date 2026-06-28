@@ -102,3 +102,4 @@ Network conditions and resource availability have a direct effect on live migrat
 %% Links to related concepts. %%
 
 - [[@attar-khorasani2026]]
+- [[@tinto2025]]
