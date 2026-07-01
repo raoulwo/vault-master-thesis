@@ -6,6 +6,13 @@ tags:
 
 Live migration is a *seamless transfer* of a running computational entity (e.g. [[Virtual Machine]]) between various hosts while the *continuous operation* and *client connectivity* is maintained.
 
+(3) Live migration is moving a service from one server to another without losing state of the running application. This involves migrating CPU, memory, and network state.
+
+(3) Live migration is measured by two important metrics:
+
+- Downtime
+- Migration time
+
 ## Migration Objectives
 
 Migration objectives fall into four categories:
@@ -62,6 +69,11 @@ Pre-copy:
 	- Limited parallelism during data-dumping
 	- Non-convergence of pre-copy strategy
 	- Limited parallelism in recovery
+- Two phases:
+	- Push phase
+	- Stop-and-copy phase
+- Papers
+	- 
 
 Post-copy:
 
@@ -70,8 +82,20 @@ Post-copy:
 - Challenges:
 	- High risk of data loss if failure before all memory pages transferred
 	- Better performance than pre-copy, however not done in practice because of poor reliability
+- Two phases:
+	- Stop-and-copy phase
+	- Pull phase
+- Papers
+	- 
 
-NOTE: Hybrid approaches exist that combine pre-copy and post-copy
+- Hybrid approaches exist that combine pre-copy and post-copy
+	- Phases:
+		- Push phase
+		- Stop-and-copy phase
+		- Pull phase
+- Papers
+	- 
+	
 NOTE: Boundaries of live migration can only be defined in context of a concrete use case
 
 Checkpoint/restore tools:
@@ -101,5 +125,6 @@ Network conditions and resource availability have a direct effect on live migrat
 
 %% Links to related concepts. %%
 
-- [[@attar-khorasani2026]]
-- [[@tinto2025]]
+1. [[@attar-khorasani2026]]
+2. [[@tinto2025]]
+3. [[@govindaraj2018]]

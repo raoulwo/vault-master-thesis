@@ -1,7 +1,17 @@
 
-- [x] Summarize last meetings
-- [x] Sync Zotero to desktop app
-- [x] Clean up Zotero workspace
-- [ ] Research live migrations
-- [ ] Research multi-tenancy
-- [ ] Create project timeline spreadsheet
+- [ ] Research the VR/AR use case:
+	- (Orbital) edge computing, LEO satellites
+	- Real-time requirements (latency, packet loss)
+		- [ ] Find out packet loss requirements for VR/AR use cases
+		- E2E latency <= 16ms
+	- Data transmission (TCP, UDP...)
+- [ ] Research live migration mechanisms:
+	- Are they sufficient for the packet loss requirements?
+- [ ] Figure out how to evaluate existing packet loss via experiments
+- [ ] Write a draft for a proposal (1-2 pages):
+	- Live migration with focus on minimizing packet loss
+		- Focus on VR/AR use case which is latency critical
+	- Outline and perform experiments to show packet loss is too large
+		- Evaluate results and show graphics
+- [ ] Maybe read up on meta-literature on how to do scientific work
+	- If I'm struggling hard to find a research niche, I have to put more work in
