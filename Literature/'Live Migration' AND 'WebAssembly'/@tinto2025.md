@@ -6,7 +6,7 @@ tags:
   - live-migration
 pdf_link: "[[Live_Migration_of_Compiled_Wasm_Modules_Across_the_Compute_Continuum.pdf|Open PDF]]"
 ---
-# @tinto2025
+# Live migration of compiled Wasm modules across the Compute Continuum
 
 ## TLDR
 
