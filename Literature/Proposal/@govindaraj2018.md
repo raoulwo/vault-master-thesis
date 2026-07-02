@@ -37,7 +37,7 @@ Core contributions:
 Factory automation applications:
 
 - Collaborative robotics
-- [[Augmented Reality (AR) and Virtual Reality (VR)|Augmented reality]]
+- [[Extended Reality (XR)|Augmented reality]]
 - Autonomous transport system
 - Predictive maintenance
 

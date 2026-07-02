@@ -2,7 +2,15 @@
 tags:
   - ar/vr
 ---
-# Augmented Reality (AR) and Virtual Reality (VR)
+# Extended Reality (XR)
+
+Extended reality is a general term that encompasses:
+
+- Virtual Reality (VR)
+- Augmented Reality (AR)
+- Mixed Reality (MR)
+
+AR/VR:
 
 - (1) End-to-end latency **must** be *less than 16ms* to avoid perceptional issues.
 
