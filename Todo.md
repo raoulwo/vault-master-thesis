@@ -2,7 +2,7 @@
 - [ ] Research the VR/AR use case:
 	- (Orbital) edge computing, LEO satellites
 	- Real-time requirements (latency, packet loss)
-		- [ ] Find out packet loss requirements for VR/AR use cases
+		- [x] Find out packet loss requirements for VR/AR use cases
 		- E2E latency <= 16ms
 	- Data transmission (TCP, UDP...)
 - [ ] Research live migration mechanisms:
