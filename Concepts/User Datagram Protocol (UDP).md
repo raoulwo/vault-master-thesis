@@ -1,7 +1,7 @@
 ---
 tags:
   - transport-layer
-  - networking
+  - networks
   - protocol
 ---
 # User Datagram Protocol (UDP)
