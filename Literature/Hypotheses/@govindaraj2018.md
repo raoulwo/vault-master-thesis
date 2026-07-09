@@ -134,7 +134,6 @@ Four phases:
 	- Overhead results in e2e latency of 100 microseconds
 		- Minimal effect on latency requirements
 
-
 ---
 
 ## Links

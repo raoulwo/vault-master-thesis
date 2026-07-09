@@ -7,7 +7,7 @@ tags:
 
 - The transmission delay is the *amount of time required to push all packet's bits into the wire*.
 - It's the *delay caused by data-rate of the link*.
-- The delay is proportional to the packet's length, it has nothing to do with node distance.
+- The delay is proportional to the packet's length, it has **nothing to do with node distance** ([[Propagation Delay]]).
 
 ---
 

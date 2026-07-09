@@ -1,17 +1,10 @@
 
-- [ ] Research the VR/AR use case:
-	- (Orbital) edge computing, LEO satellites
-	- Real-time requirements (latency, packet loss)
-		- [x] Find out packet loss requirements for VR/AR use cases
-		- E2E latency <= 16ms
-	- Data transmission (TCP, UDP...)
-- [ ] Research live migration mechanisms:
-	- Are they sufficient for the packet loss requirements?
-- [ ] Figure out how to evaluate existing packet loss via experiments
-- [ ] Write a draft for a proposal (1-2 pages):
-	- Live migration with focus on minimizing packet loss
-		- Focus on VR/AR use case which is latency critical
-	- Outline and perform experiments to show packet loss is too large
-		- Evaluate results and show graphics
-- [ ] Maybe read up on meta-literature on how to do scientific work
-	- If I'm struggling hard to find a research niche, I have to put more work in
+- [ ] Write a proposal draft (1-2 pages)
+- [ ] Define hypotheses for how live migration mechanisms might fail under orbital edge computing constraints
+	- [x] Define constraints unique to the orbital edge computing environment
+	- [ ] Read up on live migration papers (starting with [[@govindaraj2018]]) and think about how their approaches might fail under the identified orbital constraints; define the hypotheses based on that
+
+## Misc
+
+- [ ] Read about *Celestial* testbed
+- [ ] Read about *Hypatia* simulator

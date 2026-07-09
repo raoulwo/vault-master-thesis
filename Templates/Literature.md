@@ -11,29 +11,13 @@ pdf_link: "[[<TODO>|Open PDF]]"
 
 %% One-sentence summary of the core/claim contribution. %%
 
-## Thoughts
+TODO
 
-%% Thoughts and questions about the paper. %%
+## Notes
 
-## Related Work
+%% Notes about the paper. %%
 
-%% Existing state-of-the-art research. %%
-
-## Contributions
-
-%% Research gap and novel contributions. %%
-
-## Methodology
-
-%% Architecture of the solution. %%
-
-## Implementation
-
-%% Actual implementation of the solution. %%
-
-## Evaluation
-
-%% The evaluation of the solution. %%
+TODO
 
 ---
 

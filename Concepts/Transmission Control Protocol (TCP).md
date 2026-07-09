@@ -12,6 +12,10 @@ TODO
 
 TODO
 
+## TCP Retransmission Timeout (RTO)
+
+TODO
+
 ---
 
 ## Links
