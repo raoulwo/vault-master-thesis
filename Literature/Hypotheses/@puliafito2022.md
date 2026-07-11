@@ -192,5 +192,5 @@ The paper also introduces a third migration strategy, *Pool-of-addresses*. The c
 
 %% Links to related literature. %%
 
-- [Explicit Impementation (GitHub)](https://github.com/kruviser/aioquic-explicit_UniPisa)
+- [Explicit Implementation (GitHub)](https://github.com/kruviser/aioquic-explicit_UniPisa)
 - [Pool-of-Addresses Implementation (GitHub)](https://github.com/kruviser/aioquic-PoA_UniPisa)
