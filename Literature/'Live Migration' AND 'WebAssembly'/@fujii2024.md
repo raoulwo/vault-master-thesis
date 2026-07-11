@@ -42,7 +42,7 @@ WebAssembly seems suitable for addressing both these challenges:
 1. It abstracts away heterogeneous platforms
 2. It is more lightweight than container and VM runtimes
 
-**However**, migrating [[Virtual Machine|VMs]] across different [[WebAssembly]] runtimes is difficult since the standard doesn't specify the implementation design of internal runtimes very well.
+**However**, migrating [[Virtual Machines (VMs)|VMs]] across different [[WebAssembly]] runtimes is difficult since the standard doesn't specify the implementation design of internal runtimes very well.
 
 Contributions:
 

@@ -4,7 +4,7 @@ tags:
 ---
 # Live Migration
 
-Live migration is a *seamless transfer* of a running computational entity (e.g. [[Virtual Machine]]) between various hosts while the *continuous operation* and *client connectivity* is maintained.
+Live migration is a *seamless transfer* of a running computational entity (e.g. [[Virtual Machines (VMs)]]) between various hosts while the *continuous operation* and *client connectivity* is maintained.
 
 (3) Live migration is moving a service from one server to another without losing state of the running application. This involves migrating CPU, memory, and network state.
 

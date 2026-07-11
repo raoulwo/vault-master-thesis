@@ -30,9 +30,13 @@ The paper assumes that the *destination server can smoothly buffer and forward i
 
 *Hypothesis 2*. Terrestrial redundancy-based live migration methods fail in orbit because variable inter-satellite link (ISL) bandwidth restricts destination satellite's ability to forward data, causing rapid memory buffer exhaustion when paired with a high-speed ground station uplink.
 
+Comment by Daniel: ISLs have throughput of roughly 10-100 Gbit/s, way higher than ground-to-satellite links that also face the issue of transmission loss due to atmospheric absorption. So, this hypothesis is quite unlikely to be true.
+
 The paper assumes that the *application is deterministic*, meaning the *destination server can replay buffered network packets* to catch up to the source server's state. For live migration in orbit, this assumption does not hold because the space environment forces hardware into non-deterministic execution loops. Cosmic radiation causes Single Event Upsets (SEUs) that force the CPU to inject arbitrary processing pauses for error correction, while passive thermal stagnation triggers aggressive CPU clock throttling. This will presumably prevent the destination satellite from emptying its packet buffer, causing the migration loop to fail to converge before the ground station visibility window closes:
 
 *Hypothesis 3*. Live migration methods relying on packet replay fail to achieve state convergence in orbit because radiation-induced hardware interrupts and thermal throttling destroy computational determinism, preventing the destination satellite from processing its backlog before losing ground station connectivity.
+
+Comment by Daniel: Would need to confirm the Gemini statement of applications not being deterministic in space, literature to confirms these claims were recommended by LLM.
 
 ## Related Work
 

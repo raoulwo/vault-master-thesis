@@ -1,11 +1,12 @@
 ---
 author: <TODO>
-year: <TODO>
+year: 2018
 tags:
-  - <TODO>
-pdf_link: "[[<TODO>|Open PDF]]"
+  - live-migration
+  - edge-cloud-continuum
+pdf_link: "[[Live_Service_Migration_in_Mobile_Edge_Clouds.pdf|Open PDF]]"
 ---
-# {{title}}
+# @machen2018
 
 ## TLDR
 
