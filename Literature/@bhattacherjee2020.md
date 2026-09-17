@@ -18,7 +18,48 @@ The paper examines the challenges and opportunities of in-orbit computing.
 
 %% Thoughts and questions about the paper. %%
 
-- Idea: LEO constellations as servers for online matchmaking, rollback netcode, worldwide playability
+- LEO satellites altitude <= 2000km -> low latency with RTT in single-digit milliseconds
+- Worldwide coverage possible
+- Depending on altitude, satellite velocity and orbital period are determined by orbital mechanics
+- No stationarity, ground station sees a satellite only for a couple of minutes
+- Constellations consist of uplink, ISLs, downlink
+	- Uplink and downlink more limited in bandwidth in the order of 10 Gbps
+	- For ISLs higher bandwidths may be achievable
+- Kuiper:
+	- 4-8ms RTT
+	- no service beyond 60 degrees latitude
+	- 10+ satellites reachable for most latitudes
+- Starlink
+	- 4-16ms RTT
+	- service including 90 degrees latitude (so all possible locations)
+	- 30+ satellites reachable from almost all locations
+- Multi-user interaction use case:
+	- Using LEO satellite as server instead of just relay could substantially reduce latency
+	- Important for QoE, especially in real-time context of gaming, VR/AR
+- Processing space-native data use case:
+	- In-orbit processing more costly than terrestrial cloud processing
+		- Moving terrestrial resources up too costly
+		- Apps that generate data in space however can process it immediately there as well
+- Feasibility of in-orbit compute:
+	- Weight and volume:
+		- HPE ProLiant DL325 Gen10
+		- 64 cores 2.4-3.35 GHz
+		- 2TB memory
+		- 15.6kg weight
+	- Radiation hardening
+		- HPE Spaceborne Computer on the ISS is commodity hardware
+			- Software-hardening only
+		- Estimated that commodity hardware with software hardening is good enough
+	- Power
+		- Estimated to be around 1.5 kW
+		- HPE server operating at 225W/350W consumes 15%/23% of that power
+	- Lifecycle
+		- Starlink satellites have life of ~5 years
+	- Cost
+		- Launch cost for Falcon 9 rockets of Starlink and 15.6kg server weight, cost of launching a server is ~ 42'000 USD
+		- Assuming a life of 3 years -> satellite ~ 3x more expensive than data center (if yearly cost is 5'000 USD)
+- Virtual stationarity
+	- State migration every couple of minutes is substantial overhead, however high bandwidth ISLs could accommodate this
 
 ## Related Work
 

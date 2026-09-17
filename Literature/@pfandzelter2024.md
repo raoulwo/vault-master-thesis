@@ -23,6 +23,7 @@ pdf_link: "[[Komet__A_Serverless_Platform_for_Low-Earth_Orbit_Edge_Services.pdf|
 - A centralized scheduler is proposed -> What if we have decentralized schedulers (better scalability, however more complex), what would be the benefits however?
 - Scheduling heuristics: Latency vs. number of migrations
 - Komet leverages satellite trajectory calculations for scheduling migrations -> What if we could utilize edge AI models for prediction rather than calculations (I don't know if less compute-intensive)
+
 ## Related Work
 
 %% Existing state-of-the-art research. %%

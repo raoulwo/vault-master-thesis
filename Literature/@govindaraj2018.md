@@ -37,6 +37,7 @@ The paper assumes that the *application is deterministic*, meaning the *destinat
 *Hypothesis 3*. Live migration methods relying on packet replay fail to achieve state convergence in orbit because radiation-induced hardware interrupts and thermal throttling destroy computational determinism, preventing the destination satellite from processing its backlog before losing ground station connectivity.
 
 Comment by Daniel: Would need to confirm the Gemini statement of applications not being deterministic in space, literature to confirms these claims were recommended by LLM.
+In LEO, can definitely assume that underlying hardware is deterministic.
 
 ## Related Work
 
